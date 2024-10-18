@@ -24,7 +24,7 @@ class GitHubAPI:
         try:
             repo_name = repo_name.strip('/')
             headers = {'Authorization': f'token {self.token}'}
-            url = f"{self.api_url}/repos/{repo_owner}/{repo_name}/commits?path={file_path}"
+            url = f"{self.BASE_URL}/repos/{repo_owner}/{repo_name}/commits?path={file_path}"
             response = requests.get(url=url, headers=headers)
             response.raise_for_status()  # Raise an error for HTTP errors
             return response.json()
