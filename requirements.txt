@@ -1,0 +1,7 @@
+# # Required libraries
+requests
+fastapi
+uvicorn
+pandas  # Optional, for displaying results in a table
+python-dotenv  # For loading environment varixx`ables
+tabulate
